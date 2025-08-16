@@ -1,0 +1,8 @@
+print('Astrounaut Mission Form')
+name=input('please enter your name:')
+age=input('please enter your age:')
+fav_planet=input('please enter your favourite planet:')
+mis_goal=input('please enter your mission goal:')
+#print('hi '+name)
+#print('hi {}'.format(age))
+print('commander {}, age {}, is headed to {} to {}'.format(name, age, fav_planet, mis_goal))
