@@ -1,0 +1,20 @@
+import turtle
+x=turtle.Turtle()
+x.speed=100
+x.color=('black')
+for i in range(200):
+    x.forward(50)
+    x.right(135)
+    x.forward(100)
+    x.left(225)
+    x.forward(175)
+    x.right(135)
+    x.forward(100)
+    x.right(135)
+    x.forward(50)
+    x.left(90)
+    x.forward(37)
+    x.right(90)
+    x.forward(50)
+    x.right(180)
+turtle.done()
