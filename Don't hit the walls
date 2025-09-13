@@ -1,0 +1,35 @@
+import pygame
+import sys
+pygame.init()
+WIDTH, HEIGHT=500, 500
+win=pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption('avoid the walls')
+WHITE=(255, 255, 255)
+RED=(255, 0, 0)
+player_size=30
+player_x=WIDTH//2
+player_y=HEIGHT//2
+player1 = pygame.Rect(player_x, player_y, player_size, player_size)
+player_speed=5
+running=True
+while running:
+    pygame.time.delay(30)
+    for event in pygame.event.get():
+        if event.type==pygame.QUIT:
+            running=False
+    keys=pygame.key.get_pressed()
+    if keys[pygame.K_LEFT]:
+        player_x-=player_speed
+    if keys[pygame.K_RIGHT]:
+        player_x+=player_speed
+    if keys[pygame.K_UP]:
+        player_y-=player_speed
+    if keys[pygame.K_DOWN]:
+        player_y+=player_speed
+    if player_x<0 or player_x+player_size>WIDTH or player_y<0 or player_y+player_size>HEIGHT:
+        print('Game Over')
+        running=False
+    player1=pygame.Rect(player_x, player_y, player_size, player_size)
+    win.fill(WHITE)
+    pygame.draw.rect(win, RED, player1)
+    pygame.display.update()
