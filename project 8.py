@@ -1,0 +1,20 @@
+import turtle
+s=turtle.Screen()
+s.bgcolor("white")
+q=turtle.Turtle()
+q.speed(100)
+q.width(6)
+def ring(color,x,y):
+    q.up()
+    q.goto(x,y)
+    q.down()
+    q.color(color)
+    for i in range(72):
+        q.forward(3)
+        q.right(5)
+ring('dodgerblue',0,0)
+ring('yellow',40,-30)
+ring('grey0',80,0)
+ring('green3',120,-30)
+ring('red3',160,0)
+s.mainloop()
